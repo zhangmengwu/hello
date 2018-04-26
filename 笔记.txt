@@ -1,0 +1,275 @@
+Last login: Thu Apr 26 09:52:27 on ttys000
+zhangmengdeMacBook-Pro:~ zhangmeng$ cd /Users/zhangmeng/Desktop/hello-master 
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git init
+Initialized empty Git repository in /Users/zhangmeng/Desktop/hello-master/.git/
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	1.txt
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git add 1.txt
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md
+
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git add README.md
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   1.txt
+	new file:   README.md
+
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git commit -m '我的第一次提交'
+[master (root-commit) ec2244f] 我的第一次提交
+ 2 files changed, 3 insertions(+)
+ create mode 100644 1.txt
+ create mode 100755 README.md
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git status
+On branch master
+nothing to commit, working tree clean
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git remote -v
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git log
+commit ec2244f3040c575c114c92c1491028faaa975f11 (HEAD -> master)
+Author: zhangmengwu <1246184492@qq.com>
+Date:   Thu Apr 26 10:33:43 2018 +0800
+
+    我的第一次提交
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git config --global user.name zhangmeng
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git config --global user.email 1246184492@qq.com
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git add .
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   .DS_Store
+	modified:   1.txt
+
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git commit -m '第一次修改'
+[master ca596f3] 第一次修改
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 .DS_Store
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git status
+On branch master
+nothing to commit, working tree clean
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git log
+commit ca596f38b8b0fedbbcaf2fa2233928b47631e543 (HEAD -> master)
+Author: zhangmeng <1246184492@qq.com>
+Date:   Thu Apr 26 11:22:10 2018 +0800
+
+    第一次修改
+
+commit ec2244f3040c575c114c92c1491028faaa975f11
+Author: zhangmengwu <1246184492@qq.com>
+Date:   Thu Apr 26 10:33:43 2018 +0800
+
+    我的第一次提交
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git add .
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git commit -m '增加index.html'
+  [恢复于 2018年4月26日 11:25:47]
+Last login: Thu Apr 26 10:20:09 on ttys000
+Restored session: 2018年 4月26日 星期四 11时25分44秒 CST
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ zhangmeng$ git commit -m '增加index.html'
+-bash: zhangmeng$: command not found
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   index.html
+
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git commit -m '增加index.html'
+[master 1cbd349] 增加index.html
+ 1 file changed, 10 insertions(+)
+ create mode 100644 index.html
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ 
+  [恢复于 2018年4月26日 11:27:39]
+Last login: Thu Apr 26 11:25:47 on ttys000
+Restored session: 2018年 4月26日 星期四 11时27分37秒 CST
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git add .
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git commit -m '修改index.html'
+[master c4d6b81] 修改index.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   1.txt
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git add .
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   1.txt
+	modified:   index.html
+
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git commit -m '修改index和1.txt'
+[master 8d8b371] 修改index和1.txt
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git log
+commit 8d8b371a3eb14ae18e3da71c2b0eff92ec3f07da (HEAD -> master)
+Author: zhangmeng <1246184492@qq.com>
+Date:   Thu Apr 26 11:30:10 2018 +0800
+
+    修改index和1.txt
+
+commit c4d6b817a9abd8551231f93ddb0c361ab2861017
+Author: zhangmeng <1246184492@qq.com>
+Date:   Thu Apr 26 11:28:33 2018 +0800
+
+    修改index.html
+
+commit 1cbd34996a34eae3ba47d06493d5ceaaeea6ebe7
+Author: zhangmeng <1246184492@qq.com>
+Date:   Thu Apr 26 11:26:36 2018 +0800
+
+    增加index.html
+
+commit ca596f38b8b0fedbbcaf2fa2233928b47631e543
+Author: zhangmeng <1246184492@qq.com>
+Date:   Thu Apr 26 11:22:10 2018 +0800
+
+    第一次修改
+
+commit ec2244f3040c575c114c92c1491028faaa975f11
+Author: zhangmengwu <1246184492@qq.com>
+Date:   Thu Apr 26 10:33:43 2018 +0800
+
+    我的第一次提交
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git reset --hard HEAD^
+HEAD is now at c4d6b81 修改index.html
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git reset --hard HEAD^^
+HEAD is now at ca596f3 第一次修改
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git log
+commit ca596f38b8b0fedbbcaf2fa2233928b47631e543 (HEAD -> master)
+Author: zhangmeng <1246184492@qq.com>
+Date:   Thu Apr 26 11:22:10 2018 +0800
+
+    第一次修改
+
+commit ec2244f3040c575c114c92c1491028faaa975f11
+Author: zhangmengwu <1246184492@qq.com>
+Date:   Thu Apr 26 10:33:43 2018 +0800
+
+    我的第一次提交
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git reflog
+ca596f3 (HEAD -> master) HEAD@{0}: reset: moving to HEAD^^
+c4d6b81 HEAD@{1}: reset: moving to HEAD^
+8d8b371 HEAD@{2}: commit: 修改index和1.txt
+c4d6b81 HEAD@{3}: commit: 修改index.html
+1cbd349 HEAD@{4}: commit: 增加index.html
+ca596f3 (HEAD -> master) HEAD@{5}: commit: 第一次修改
+ec2244f HEAD@{6}: commit (initial): 我的第一次提交
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git reset --hard 8d8b371
+HEAD is now at 8d8b371 修改index和1.txt
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git remote -v
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git remote add origin https://github.com/zhangmengwu/hello.git
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git remote -v
+origin	https://github.com/zhangmengwu/hello.git (fetch)
+origin	https://github.com/zhangmengwu/hello.git (push)
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git pull
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/zhangmengwu/hello
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git push –u origin master
+error: src refspec origin does not match any.
+error: failed to push some refs to '–u'
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git push  origin master
+To https://github.com/zhangmengwu/hello.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/zhangmengwu/hello.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git remote -v
+origin	https://github.com/zhangmengwu/hello.git (fetch)
+origin	https://github.com/zhangmengwu/hello.git (push)
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git pull origin master
+From https://github.com/zhangmengwu/hello
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git push  origin master
+To https://github.com/zhangmengwu/hello.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/zhangmengwu/hello.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ git push -u origin master -f 
+Counting objects: 18, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (18/18), 2.06 KiB | 351.00 KiB/s, done.
+Total 18 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/zhangmengwu/hello.git
+ + f9de2af...8d8b371 master -> master (forced update)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+zhangmengdeMacBook-Pro:hello-master zhangmeng$ 
